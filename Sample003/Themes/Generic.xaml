@@ -16,8 +16,11 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
                             <Trigger.Setters>
-                                <Setter Property="Background" 
+                                <!--<Setter Property="Background" 
                                         Value="{TemplateBinding AlternativeBackground}" 
+                                        TargetName="border"/>-->
+                                <Setter Property="Background" 
+                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=AlternativeBackground}" 
                                         TargetName="border"/>
                             </Trigger.Setters>
                         </Trigger>

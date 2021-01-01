@@ -17,7 +17,7 @@
         
     </Window.Resources>
     <StackPanel >
-        <local:MyControl Style="{StaticResource MyControlBaseStyle}" Background="Red" />
-        <local:MyControl Style="{StaticResource MyControlBaseStyle}"/>
+        <local:MyControl Style="{StaticResource MyControlBaseStyle}" Background="Red" AlternativeBackground="Blue" />
+        <local:MyControl Style="{StaticResource MyControlBaseStyle}" Background="White" AlternativeBackground="Black" />
     </StackPanel>
 </Window>

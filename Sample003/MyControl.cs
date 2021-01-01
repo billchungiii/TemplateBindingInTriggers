@@ -46,9 +46,19 @@ namespace Sample003
     /// </summary>
     public class MyControl : Control
     {
+        public static readonly DependencyProperty AlternativeBackgroundProperty =
+            DependencyProperty.Register(nameof(AlternativeBackground), typeof(Brush), typeof(MyControl),
+                new PropertyMetadata(new SolidColorBrush(Colors.Transparent)));
         static MyControl()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MyControl), new FrameworkPropertyMetadata(typeof(MyControl)));
         }
+
+        public Brush AlternativeBackground
+        {
+            get { return (Brush)GetValue(AlternativeBackgroundProperty); }
+            set { SetValue(AlternativeBackgroundProperty, value); }
+        }
+
     }
 }
